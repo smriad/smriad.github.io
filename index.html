@@ -1418,12 +1418,10 @@
   /* Tech Stack */
   .techstack-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    width: 50%;
-    margin: auto;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center the items */
+    gap: 20px; /* Space between items */
+
   }
 
   .techstack-item {
@@ -1444,12 +1442,11 @@
   /* Timeline Container */
   .timeline-container {
     display: flex; /* Flexbox for side-by-side layout */
-    justify-content: space-between; /* Space between sections */
+    flex-direction: column; /* Stack vertically on small screens */
     margin: 20px 0; /* Add margin to the container */
   }
 
   .timeline {
-    flex: 1; /* Allow sections to grow equally */
     margin: 0 10px; /* Horizontal margin between sections */
     padding: 20px; /* Padding for better spacing */
     background-color: var(--eerie-black-2); /* Light background color */
@@ -1469,5 +1466,46 @@
 
   .preview-item img {
     margin-bottom: 10px;
+    max-width: 100%; /* Ensure images don't overflow their containers */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Media Queries for Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .timeline-container {
+      flex-direction: column; /* Stack elements on small screens */
+    }
+
+    .timeline {
+      margin: 10px 0; /* Add vertical margin for spacing */
+    }
+
+    .project-title,
+    .project-category {
+      font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+  
+  }
+
+  /* Media Queries for Larger Screens */
+  @media (min-width: 769px) {
+    .timeline-container {
+      flex-direction: row; /* Use two columns on larger screens */
+      justify-content: space-between; /* Space between columns */
+    }
+
+    .timeline {
+      flex: 0 1 calc(50% - 20px); /* Allow each timeline section to take up half the space minus gap */
+    }
+
+    .timeline:nth-child(odd) {
+      margin-right: 10px; /* Add right margin to odd items */
+    }
+
+    .timeline:nth-child(even) {
+      margin-left: 10px; /* Add left margin to even items */
+    }
   }
 </style>
+
