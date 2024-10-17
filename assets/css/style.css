@@ -1712,7 +1712,7 @@ textarea.form-input::-webkit-resizer {
 
   .contacts-list {
     grid-template-columns: 1fr 1fr;
-    gap: 30px 15px;
+    gap: 0px 15px;
   }
 
   /**
