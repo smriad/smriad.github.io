@@ -1,20 +1,15 @@
-'use strict';
-
-// ---------- Utility Functions ----------
-const elementToggleFunc = (elem) => {
+elementToggleFunc = (elem) => {
   elem.classList.toggle("active");
-};
-
-// ---------- Sidebar ----------
-const sidebar = document.querySelector("[data-sidebar]");
+}
+elementToggleFunc(sidebar));
+}
+sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 if (sidebarBtn) {
   sidebarBtn.addEventListener("click", () => elementToggleFunc(sidebar));
 }
-
-// ---------- Read More Toggle ----------
-function toggleReadMore(event) {
+toggleReadMore(event) {
   event.preventDefault();
   const moreText = event.target.previousElementSibling.querySelector(".more-text");
   const isVisible = moreText.classList.contains("visible");
@@ -22,8 +17,4 @@ function toggleReadMore(event) {
   if (isVisible) {
     moreText.classList.remove("visible");
     event.target.textContent = "Read More";
-  } else {
-    moreText.classList.add("visible");
-    event.target.textContent = "Read Less";
   }
-}
