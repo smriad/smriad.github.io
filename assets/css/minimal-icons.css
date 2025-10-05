@@ -28,3 +28,15 @@
 .fa-java:before { content: '☕'; }
 .fa-wordpress:before { content: '📝'; }
 .fa-github:before { content: '🐙'; }
+
+/* Additional FontAwesome classes that might be used */
+.fa-solid:before { content: ''; }
+.fa-brands:before { content: ''; }
+.fa-solid.fa-chess-king:before { content: '♔'; }
+.fa-solid.fa-code-branch:before { content: '🌿'; }
+.fa-solid.fa-cloud:before { content: '☁️'; }
+.fa-solid.fa-lightbulb:before { content: '💡'; }
+.fa-solid.fa-network-wired:before { content: '🔗'; }
+.fa-brands.fa-java:before { content: '☕'; }
+.fa-brands.fa-github:before { content: '🐙'; }
+.fa.fa-wordpress:before { content: '📝'; }
