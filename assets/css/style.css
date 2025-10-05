@@ -2183,9 +2183,6 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 15px; /* Space below the title */
   }
 
-  .icon-box {
-    margin-right: 10px; /* Space between icon and title */
-  }
 
   .preview-item img {
     margin-bottom: 10px;
