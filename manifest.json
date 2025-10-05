@@ -1,0 +1,11 @@
+{
+  "name": "My Site",
+  "short_name": "Site",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "My personal or project site",
+  "prefer_related_applications": false
+}
