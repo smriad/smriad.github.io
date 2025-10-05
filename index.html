@@ -75,36 +75,33 @@
       />
     </noscript>
   
-    <!-- ✅ Font Awesome (Non-blocking) -->
-    <link
-      rel="preload"
-      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
+    <!-- ✅ Minimal Icons (Replaces FontAwesome) -->
+    <link rel="preload" href="./assets/css/minimal-icons.css" as="style" />
+    <link rel="stylesheet" href="./assets/css/minimal-icons.css" media="print" onload="this.media='all'" />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+        href="./assets/css/minimal-icons.css"
       />
     </noscript>
-    <script src="https://kit.fontawesome.com/8686e79ddc.js" crossorigin="anonymous" defer></script>
+    <!-- ✅ Minimal Icons (Replaces FontAwesome) -->
+    <link rel="stylesheet" href="./assets/css/minimal-icons.css" />
   
     <!-- ✅ Favicon -->
     <link rel="icon" href="./assets/images/logo.ico" type="image/x-icon" />
   
-    <!-- ✅ Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B22EG26EBD"></script>
-    <script>
+    <!-- ✅ Deferred Analytics (Non-blocking) -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-B22EG26EBD"></script>
+    <script defer>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-B22EG26EBD', { anonymize_ip: true });
     </script>
   
-    <!-- ✅ Google AdSense -->
+    <!-- ✅ Google AdSense (Deferred) -->
     <script
-      async
+      defer
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1388692649297516"
       crossorigin="anonymous"
     ></script>

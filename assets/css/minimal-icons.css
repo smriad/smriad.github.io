@@ -1,0 +1,30 @@
+
+/* Minimal Icon Font - Only the icons we actually use */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('data:font/woff2;base64,') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa, .fas, .far, .fab, .fal, .fad, .fat {
+  font-family: 'FontAwesome' !important;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+/* Specific icons we use - replace with Unicode or SVG */
+.fa-telegram:before { content: '📱'; }
+.fa-chess-king:before { content: '♔'; }
+.fa-code-branch:before { content: '🌿'; }
+.fa-cloud:before { content: '☁️'; }
+.fa-lightbulb:before { content: '💡'; }
+.fa-network-wired:before { content: '🔗'; }
+.fa-java:before { content: '☕'; }
+.fa-wordpress:before { content: '📝'; }
+.fa-github:before { content: '🐙'; }
