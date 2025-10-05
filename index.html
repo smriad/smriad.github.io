@@ -5,9 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>SM Riad - Head of Technology | CTO | Solution Architect</title>
-
     <meta
       name="description"
       content="Official portfolio of SM Riad — Head of Technology & CTO from Bangladesh with 15+ years experience in software development, cloud transformation, DevOps, and innovation leadership."
@@ -22,29 +20,52 @@
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
     <link rel="canonical" href="https://smriad.github.io/" />
-
+  
     <!-- ✅ PWA + Theme -->
     <meta name="theme-color" content="#0d1117" />
     <meta name="mobile-web-app-capable" content="yes" />
     <link rel="manifest" href="./manifest.json" />
-
+  
     <!-- ✅ Preconnect & Prefetch -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
     <link rel="dns-prefetch" href="https://kit.fontawesome.com" />
-
-    <!-- ✅ Preload CSS -->
+  
+    <!-- ✅ CSS: Inline Critical + Async Load -->
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #0d1117;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      a {
+        color: #00bcd4;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
     <link rel="preload" href="./assets/css/style.css" as="style" />
-    <link rel="stylesheet" href="./assets/css/style.css" media="all" />
-
+    <link rel="stylesheet" href="./assets/css/style.css" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="./assets/css/style.css" />
+    </noscript>
+  
     <!-- ✅ Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-
-    <!-- ✅ Font Awesome (non-blocking) -->
+  
+    <!-- ✅ Font Awesome (Non-blocking) -->
     <link
       rel="preload"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
@@ -57,28 +78,28 @@
         href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
       />
     </noscript>
-
+    <script src="https://kit.fontawesome.com/8686e79ddc.js" crossorigin="anonymous" defer></script>
+  
     <!-- ✅ Favicon -->
     <link rel="icon" href="./assets/images/logo.ico" type="image/x-icon" />
-
+  
     <!-- ✅ Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B22EG26EBD"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-B22EG26EBD', { anonymize_ip: true });
     </script>
-
+  
     <!-- ✅ Google AdSense -->
-    <meta name="google-adsense-account" content="ca-pub-1388692649297516" />
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1388692649297516"
       crossorigin="anonymous"
     ></script>
-
-    <!-- ✅ Lightbox2 -->
+  
+    <!-- ✅ Lightbox2 (Deferred & Non-blocking) -->
     <link
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
@@ -95,14 +116,7 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"
       defer
     ></script>
-
-    <!-- ✅ FontAwesome Kit -->
-    <script
-      src="https://kit.fontawesome.com/8686e79ddc.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
-
+  
     <!-- ✅ Social Media Meta -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="SM Riad - Head of Technology | CTO Portfolio" />
@@ -112,7 +126,7 @@
     />
     <meta property="og:url" content="https://smriad.github.io/" />
     <meta property="og:image" content="https://smriad.github.io/assets/images/og-image.jpg" />
-
+  
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="SM Riad - Technology Leader & CTO Portfolio" />
     <meta
@@ -120,7 +134,7 @@
       content="Explore the expertise of SM Riad, a seasoned CTO & Technology Leader in software engineering, cloud, and innovation."
     />
     <meta name="twitter:image" content="https://smriad.github.io/assets/images/og-image.jpg" />
-
+  
     <!-- ✅ Structured Data (JSON-LD Schema) -->
     <script type="application/ld+json">
       {
@@ -142,986 +156,965 @@
         "description": "Head of Technology & CTO specializing in software architecture, cloud transformation, and innovation strategy."
       }
     </script>
-
-    <!-- ✅ Inline Critical CSS -->
-    <style>
-      body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #0d1117;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      a {
-        color: #00bcd4;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-    </style>
-
+  
     <!-- ✅ Cache Control -->
     <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate" />
   </head>
+  
 
-  <body>
-    <amp-auto-ads type="adsense" data-ad-client="ca-pub-1388692649297516"></amp-auto-ads>
+    <body>
+      <amp-auto-ads type="adsense" data-ad-client="ca-pub-1388692649297516"></amp-auto-ads>
 
-    <main>
-      <!-- Sidebar -->
-      <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-          <figure class="avatar-box">
-            <img src="./assets/images/my-avatar.png" alt="SM Riad" width="80" />
-          </figure>
-          <div class="info-content">
-            <h1 class="name" title="SM Riad">SM Riad</h1>
-            <p class="title">Head of Technology</p>
-            <p class="timeline-item-title">
-              <a target="_blank" href="https://questbdc.com" class="title">Quest BDC PLC</a>
-            </p>
+      <main>
+        <!-- Sidebar -->
+        <aside class="sidebar" data-sidebar>
+          <div class="sidebar-info">
+            <figure class="avatar-box">
+              <img src="./assets/images/my-avatar.png" alt="SM Riad" width="80" />
+            </figure>
+            <div class="info-content">
+              <h1 class="name" title="SM Riad">SM Riad</h1>
+              <p class="title">Head of Technology</p>
+              <p class="timeline-item-title">
+                <a target="_blank" href="https://questbdc.com" class="title">Quest BDC PLC</a>
+              </p>
+            </div>
+            <button class="info_more-btn" data-sidebar-btn>
+              <span>Show Contacts</span>
+              <ion-icon name="chevron-down"></ion-icon>
+            </button>
           </div>
-          <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
-            <ion-icon name="chevron-down"></ion-icon>
-          </button>
-        </div>
 
-        <!-- Sidebar Contacts -->
-        <div class="sidebar-info_more">
-          <div class="separator"></div>
-          <ul class="contacts-list">
-            <!-- Email -->
-            <li class="contact-item">
-              <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
-              <div class="contact-info">
-                <a target="_blank" href="mailto:smriad@gmail.com" class="contact-link">smriad@gmail.com</a>
-              </div>
-            </li>
-
-            <!-- Skype -->
-            <li class="contact-item">
-              <div class="icon-box"><ion-icon name="logo-skype"></ion-icon></div>
-              <div class="contact-info">
-                <a target="_blank" href="skype:sm.riad?chat" class="contact-link">sm.riad</a>
-              </div>
-            </li>
-
-            <!-- Discord -->
-            <li class="contact-item">
-              <div class="icon-box"><ion-icon name="logo-discord"></ion-icon></div>
-              <div class="contact-info">
-                <a target="_blank" href="https://discord.com/users/smriad" class="contact-link">smriad</a>
-              </div>
-            </li>
-
-            <!-- Telegram -->
-            <li class="contact-item">
-              <div class="icon-box"><i class="fab fa-telegram"></i></div>
-              <div class="contact-info">
-                <a target="_blank" href="https://t.me/smakriad" class="contact-link">smakriad</a>
-              </div>
-            </li>
-
-            <!-- Birthday -->
-            <li class="contact-item">
-              <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
-              <div class="contact-info">
-                <a href="https://calendar.google.com/calendar/r/eventedit?dates=20250625/20250625&text=Riad's%20Birthday&details=Celebrate%20Riad's%20Birthday&recur=RRULE:FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=25" target="_blank">
-                  <time datetime="2025-06-25">June 25, 1983</time>
-                </a>
-              </div>
-            </li>
-
-            <!-- Location -->
-            <li class="contact-item">
-              <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
-              <div class="contact-info">
-                <a href="https://www.google.com/maps/search/?api=1&query=Dhaka,+Bangladesh" target="_blank">
-                  <address>Dhaka, Bangladesh</address>
-                </a>
-              </div>
-            </li>
-          </ul>
-
-          <div class="separator"></div>
-
-          <!-- Social Media -->
-          <ul class="social-list">
-            <li class="social-item">
-              <a target="_blank" href="https://www.github.com/smriad" class="social-link">
-                <ion-icon name="logo-github"></ion-icon>
-              </a>
-            </li>
-            <li class="social-item">
-              <a target="_blank" href="https://www.linkedin.com/in/smriad" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-            <li class="social-item">
-              <a target="_blank" href="https://www.instagram.com/smakriad" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-            <li class="social-item">
-              <a target="_blank" href="https://www.facebook.com/smriad" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </aside>
-
-      <div class="main-content">
-       
-        <article class="about active" data-page="about">
-          <header>
-            <h2 class="h2 article-title">About me</h2>
-          </header>
-
-          <section class="about-text">
-            <p>
-              As a strategic and results-driven Head of Technology, I bring over
-              15 years of leadership experience in driving digital
-              transformation, architecting scalable solutions, and building
-              high-performing engineering teams. I specialize in aligning
-              technology strategy with business objectives, optimizing
-              operations, and fostering innovation across diverse industries.
-              With a proven track record in delivering complex, enterprise-grade
-              systems, I excel at transforming vision into execution through
-              strong governance, agile methodologies, and cross-functional
-              collaboration. My passion lies in leveraging technology as a
-              catalyst for growth, operational excellence, and competitive
-              advantage.
-            </p>
-          </section>
-
-          <section class="service">
-            <h3 class="h3 service-title">What I Do as a Technology Leader</h3>
-            <ul class="service-list">
-              <!-- Strategic Technology Leadership -->
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <i
-                    class="fa-solid fa-chess-king"
-                    style="color: #ffd43b; font-size: 35px"
-                  ></i>
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Technology Leadership</h4>
-                  <p class="service-item-text">
-                    I define and drive the overall technology vision and roadmap
-                    to align with business strategy.
-                    <span class="more-text" style="display: none">
-                      As a technology leader, I focus on building
-                      high-performing engineering teams, fostering a culture of
-                      innovation, and ensuring technology investments deliver
-                      measurable business outcomes. I collaborate with
-                      cross-functional executives to identify growth
-                      opportunities, streamline operations, and adopt emerging
-                      technologies that keep the organization ahead of the
-                      curve.
-                    </span>
-                  </p>
-                  <a href="#" class="read-more" onclick="toggleReadMore(event)"
-                    >Read More</a
-                  >
+          <!-- Sidebar Contacts -->
+          <div class="sidebar-info_more">
+            <div class="separator"></div>
+            <ul class="contacts-list">
+              <!-- Email -->
+              <li class="contact-item">
+                <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+                <div class="contact-info">
+                  <a target="_blank" href="mailto:smriad@gmail.com" class="contact-link">smriad@gmail.com</a>
                 </div>
               </li>
 
-              <!-- Product & Project Governance -->
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/icon-design.svg"
-                    alt="design icon"
-                    width="40"
-                  />
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">
-                    Product & Project Governance
-                  </h4>
-                  <p class="service-item-text">
-                    I oversee product and project lifecycles from concept to
-                    launch, ensuring timely and value-driven delivery.
-                    <span class="more-text" style="display: none">
-                      My approach combines Agile leadership with business acumen
-                      to deliver complex projects on time and within budget. I
-                      establish governance frameworks, track KPIs, and mentor
-                      teams to maintain a balance between speed, quality, and
-                      innovation.
-                    </span>
-                  </p>
-                  <a href="#" class="read-more" onclick="toggleReadMore(event)"
-                    >Read More</a
-                  >
+              <!-- Skype -->
+              <li class="contact-item">
+                <div class="icon-box"><ion-icon name="logo-skype"></ion-icon></div>
+                <div class="contact-info">
+                  <a target="_blank" href="skype:sm.riad?chat" class="contact-link">sm.riad</a>
                 </div>
               </li>
 
-              <!-- Solution Architecture -->
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <i
-                    class="fa-solid fa-code-branch"
-                    style="color: #ffd43b; font-size: 35px"
-                  ></i>
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Solution Architecture</h4>
-                  <p class="service-item-text">
-                    I design scalable, secure, and efficient technology
-                    solutions that drive business performance.
-                    <span class="more-text" style="display: none">
-                      With expertise across modern stacks, I architect systems
-                      that are resilient, cloud-native, and cost-optimized. I
-                      ensure seamless integration between platforms, maintain
-                      compliance standards, and adopt best practices for
-                      maintainability and scalability.
-                    </span>
-                  </p>
-                  <a href="#" class="read-more" onclick="toggleReadMore(event)"
-                    >Read More</a
-                  >
+              <!-- Discord -->
+              <li class="contact-item">
+                <div class="icon-box"><ion-icon name="logo-discord"></ion-icon></div>
+                <div class="contact-info">
+                  <a target="_blank" href="https://discord.com/users/smriad" class="contact-link">smriad</a>
                 </div>
               </li>
 
-              <!-- Cloud & DevOps Strategy -->
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <i
-                    class="fa-solid fa-cloud"
-                    style="color: #ffd43b; font-size: 35px"
-                  ></i>
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Cloud & DevOps Strategy</h4>
-                  <p class="service-item-text">
-                    I lead cloud transformation initiatives and implement DevOps
-                    culture across teams.
-                    <span class="more-text" style="display: none">
-                      My focus is on automation, CI/CD, infrastructure-as-code,
-                      and cloud governance across AWS, Azure, and GCP. I enable
-                      faster releases, improved reliability, and cost-efficient
-                      operations by leveraging modern DevOps tools and scalable
-                      cloud infrastructure strategies.
-                    </span>
-                  </p>
-                  <a href="#" class="read-more" onclick="toggleReadMore(event)"
-                    >Read More</a
-                  >
+              <!-- Telegram -->
+              <li class="contact-item">
+                <div class="icon-box"><i class="fab fa-telegram"></i></div>
+                <div class="contact-info">
+                  <a target="_blank" href="https://t.me/smakriad" class="contact-link">smakriad</a>
                 </div>
               </li>
 
-              <!-- Innovation & R&D -->
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <i
-                    class="fa-solid fa-lightbulb"
-                    style="color: #ffd43b; font-size: 35px"
-                  ></i>
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">
-                    Innovation & Emerging Tech
-                  </h4>
-                  <p class="service-item-text">
-                    I explore and implement emerging technologies to create new
-                    business opportunities.
-                    <span class="more-text" style="display: none">
-                      From AI and data analytics to blockchain and IoT, I drive
-                      R&D initiatives that improve customer experiences, enhance
-                      decision-making, and unlock new revenue streams. My goal
-                      is to keep the organization future-ready through a
-                      balanced approach to experimentation and value
-                      realization.
-                    </span>
-                  </p>
-                  <a href="#" class="read-more" onclick="toggleReadMore(event)"
-                    >Read More</a
-                  >
+              <!-- Birthday -->
+              <li class="contact-item">
+                <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
+                <div class="contact-info">
+                  <a href="https://calendar.google.com/calendar/r/eventedit?dates=20250625/20250625&text=Riad's%20Birthday&details=Celebrate%20Riad's%20Birthday&recur=RRULE:FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=25" target="_blank">
+                    <time datetime="2025-06-25">June 25, 1983</time>
+                  </a>
                 </div>
               </li>
 
-              <!-- Digital Transformation & Strategy -->
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <i
-                    class="fa-solid fa-network-wired"
-                    style="color: #ffd43b; font-size: 35px"
-                  ></i>
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">
-                    Digital Transformation & Strategy
-                  </h4>
-                  <p class="service-item-text">
-                    I lead enterprise-wide transformation initiatives that
-                    modernize systems and enhance customer value.
-                    <span class="more-text" style="display: none">
-                      I partner with business leaders to define digital
-                      strategies, redesign processes, and implement modern
-                      platforms that improve agility and performance. My focus
-                      is on driving change through innovation, data-driven
-                      decision-making, and adoption of emerging technologies —
-                      ensuring sustainable growth and competitive advantage.
-                    </span>
-                  </p>
-                  <a href="#" class="read-more" onclick="toggleReadMore(event)"
-                    >Read More</a
-                  >
+              <!-- Location -->
+              <li class="contact-item">
+                <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+                <div class="contact-info">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Dhaka,+Bangladesh" target="_blank">
+                    <address>Dhaka, Bangladesh</address>
+                  </a>
                 </div>
               </li>
             </ul>
-          </section>
 
-          
+            <div class="separator"></div>
 
-          <section class="skill">
+            <!-- Social Media -->
+            <ul class="social-list">
+              <li class="social-item">
+                <a target="_blank" href="https://www.github.com/smriad" class="social-link">
+                  <ion-icon name="logo-github"></ion-icon>
+                </a>
+              </li>
+              <li class="social-item">
+                <a target="_blank" href="https://www.linkedin.com/in/smriad" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+              <li class="social-item">
+                <a target="_blank" href="https://www.instagram.com/smakriad" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+              <li class="social-item">
+                <a target="_blank" href="https://www.facebook.com/smriad" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="main-content">
+        
+          <article class="about active" data-page="about">
             <header>
-              <h2 class="h2 article-title">Skills</h2>
-              
+              <h2 class="h2 article-title">About me</h2>
             </header>
 
-            <ul class="techstack-list content-card">
-              <!-- Programming Languages -->
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                  alt="PHP"
-                  title="PHP"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://laravel.com/img/logomark.min.svg"
-                  alt="Laravel"
-                  title="Laravel"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item medium">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                  alt="Python"
-                  title="Python"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item medium">
-                <i
-                  class="fa-brands fa-java"
-                  title="Java"
-                  style="
-                    font-size: 45px;
-                    width: 45px;
-                    height: 45px;
-                    color: white;
-                  "
-                ></i>
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                  alt="JavaScript"
-                  title="JavaScript"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                  alt="TypeScript"
-                  title="TypeScript"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
-                  alt="GoLang"
-                  title="GoLang"
-                  class="tech-icon"
-                />
-              </li>
-
-              <!-- Frameworks -->
-              <li class="techstack-item funnel-item small">
-                <i
-                  class="fa fa-wordpress"
-                  title="WordPress"
-                  style="font-size: 50px; color: white"
-                ></i>
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
-                  alt="Angular"
-                  title="Angular"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  alt="React"
-                  title="React"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
-                  alt="VueJS"
-                  title="VueJS"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                  alt="Node.js"
-                  title="Node.js"
-                  class="tech-icon"
-                />
-              </li>
-
-              <!-- Backend / Architecture -->
-              <li class="techstack-item funnel-item medium">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                  alt="Docker"
-                  title="Docker"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item medium">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
-                  alt="Kubernetes"
-                  title="Kubernetes"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item medium">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
-                  alt="Nginx"
-                  title="Nginx"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item medium">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"
-                  alt="Apache"
-                  title="Apache"
-                  class="tech-icon"
-                />
-              </li>
-
-              <!-- Databases -->
-              <li class="techstack-item funnel-item medium">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                  alt="MySQL"
-                  title="MySQL"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item medium">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                  alt="PostgreSQL"
-                  title="PostgreSQL"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item medium">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                  alt="MongoDB"
-                  title="MongoDB"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item medium">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-                  alt="Redis"
-                  title="Redis"
-                  class="tech-icon"
-                />
-              </li>
-
-              <!-- Cloud & DevOps -->
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://a0.awsstatic.com/libra-css/images/logos/aws_smile-header-desktop-en-white_59x35@2x.png"
-                  alt="AWS"
-                  title="AWS"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-                  alt="Azure"
-                  title="Azure"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-                  alt="GCP"
-                  title="Google Cloud"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
-                  alt="Terraform"
-                  title="Terraform"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg"
-                  alt="Ansible"
-                  title="Ansible"
-                  class="tech-icon"
-                />
-              </li>
-
-              <!-- Tools & Management -->
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                  alt="Git"
-                  title="Git"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <i
-                  class="fa-brands fa-github"
-                  title="GitHub"
-                  style="font-size: 45px; color: white"
-                ></i>
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg"
-                  alt="Bitbucket"
-                  title="Bitbucket"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
-                  alt="GitLab"
-                  title="GitLab"
-                  class="tech-icon"
-                />
-              </li>
-
-              <!-- Collaboration -->
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
-                  alt="Jira"
-                  title="Jira"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg"
-                  alt="Confluence"
-                  title="Confluence"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
-                  alt="Slack"
-                  title="Slack"
-                  class="tech-icon"
-                />
-              </li>
-
-              <!-- IDEs -->
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                  alt="VS Code"
-                  title="VS Code"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phpstorm/phpstorm-original.svg"
-                  alt="PhpStorm"
-                  title="PhpStorm"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
-                  alt="IntelliJ"
-                  title="IntelliJ IDEA"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
-                  alt="Eclipse"
-                  title="Eclipse"
-                  class="tech-icon"
-                />
-              </li>
-
-              <!-- Data / AI -->
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
-                  alt="TensorFlow"
-                  title="TensorFlow"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
-                  alt="Pandas"
-                  title="Pandas"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
-                  alt="NumPy"
-                  title="NumPy"
-                  class="tech-icon"
-                />
-              </li>
-
-              <!-- Other -->
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
-                  alt="Linux"
-                  title="Linux"
-                  class="tech-icon"
-                />
-              </li>
-              <li class="techstack-item funnel-item small">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
-                  alt="Bash"
-                  title="Bash Scripting"
-                  class="tech-icon"
-                />
-              </li>
-            </ul>
-          </section>
-
-          <div class="timeline-container">
-            <section class="timeline">
-              <div class="title-wrapper">
-                <div class="icon-box">
-                  <ion-icon name="book-outline"></ion-icon>
-                </div>
-                <h3 class="h3">Experience</h3>
-              </div>
-
-              <ol class="timeline-list">
-                <li class="timeline-item">
-                  <div class="timeline-content">
-                    <a href="https://questbdc.com/" target="_blank">
-                      <img
-                        src="https://questbdc.com/assets/img/quest-logo.png"
-                        alt="Quest BDC PLC Logo"
-                        class="company-logo"
-                      />
-                    </a>
-                    <div class="timeline-text">
-                      <h4 class="h4 timeline-item-title">Head of Technology</h4>
-                      <h5 class="h4 timeline-item-title">
-                        <a href="https://questbdc.com/" target="_blank"
-                          >Quest BDC PLC</a
-                        >
-                      </h5>
-                      <span>May 2023 - Continuing</span>
-                    </div>
-                  </div>
-                </li>
-
-                <li class="timeline-item">
-                  <div class="timeline-content">
-                    <a href="https://www.medinatech.co/" target="_blank">
-                      <img
-                        src="https://www.medinatech.co/skins/logo.svg"
-                        alt="Medina Tech Ltd. Logo"
-                        class="company-logo"
-                      />
-                    </a>
-                    <div class="timeline-text">
-                      <h4 class="h4 timeline-item-title">
-                        Chief Technology Officer
-                      </h4>
-                      <h5 class="h4 timeline-item-title">
-                        <a href="https://www.medinatech.co/" target="_blank"
-                          >Medina Tech Ltd.</a
-                        >
-                      </h5>
-                      <span>Jan 2021 - April 2023</span>
-                    </div>
-                  </div>
-                </li>
-
-                <li class="timeline-item">
-                  <div class="timeline-content">
-                    <a href="https://www.brac.net/" target="_blank">
-                      <img
-                        src="https://www.brac.net/templates/saga/home-template/img/logo.png"
-                        alt="BRAC Logo"
-                        class="company-logo"
-                      />
-                    </a>
-                    <div class="timeline-text">
-                      <h4 class="h4 timeline-item-title">Senior Manager</h4>
-                      <h5 class="h4 timeline-item-title">
-                        <a href="https://www.brac.net/" target="_blank">BRAC</a>
-                      </h5>
-                      <span>Jan 2019 — Oct 2020</span>
-                    </div>
-                  </div>
-                </li>
-
-                <li class="timeline-item">
-                  <div class="timeline-content">
-                    <a href="https://www.brac.net/" target="_blank">
-                      <img
-                        src="https://www.brac.net/templates/saga/home-template/img/logo.png"
-                        alt="BRAC Logo"
-                        class="company-logo"
-                      />
-                    </a>
-                    <div class="timeline-text">
-                      <h4 class="h4 timeline-item-title">
-                        Lead Software Engineer
-                      </h4>
-                      <h5 class="h4 timeline-item-title">
-                        <a href="https://www.brac.net/" target="_blank">BRAC</a>
-                      </h5>
-                      <span>Jan 2012 — Dec 2018</span>
-                    </div>
-                  </div>
-                </li>
-
-                <li class="timeline-item">
-                  <div class="timeline-content">
-                    <a href="https://www.grameensolutions.com/" target="_blank">
-                      <img
-                        src="https://socialbusinesspedia.com/uploads/organization/166/logo/original/logo_5354d7356f4f6.png"
-                        alt="Grameen Solutions Logo"
-                        class="company-logo"
-                      />
-                    </a>
-                    <div class="timeline-text">
-                      <h4 class="h4 timeline-item-title">
-                        Principal Software Engineer
-                      </h4>
-                      <h5 class="h4 timeline-item-title">
-                        <a
-                          href="https://www.grameensolutions.com/"
-                          target="_blank"
-                          >Grameen Solutions</a
-                        >
-                      </h5>
-                      <span>Jun 2008 — Dec 2011</span>
-                    </div>
-                  </div>
-                </li>
-
-                <li class="timeline-item">
-                  <div class="timeline-content">
-                    <a href="https://www.evoknow.com/" target="_blank">
-                      <img
-                        src="https://cdn-images-1.medium.com/max/400/1*AF-NU2c22u-9pUTg44d5Ag@2x.png"
-                        alt="Evoknow, Inc. Logo"
-                        class="company-logo"
-                      />
-                    </a>
-                    <div class="timeline-text">
-                      <h4 class="h4 timeline-item-title">Lead Developer</h4>
-                      <h5 class="h4 timeline-item-title">
-                        <a href="https://www.evoknow.com/" target="_blank"
-                          >Evoknow, Inc.</a
-                        >
-                      </h5>
-                      <span>Nov 2006 — May 2008</span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-
-              <div class="title-wrapper">
-                <div class="icon-box">
-                  <ion-icon name="book-outline"></ion-icon>
-                </div>
-                <h3 class="h3">Education</h3>
-              </div>
-
-              <ol class="timeline-list">
-                <li class="timeline-item">
-                  <h4 class="h4 timeline-item-title">
-                    International Islamic University Chittagong
-                  </h4>
-                  <span>2002 - 2006</span>
-                  <p class="timeline-text">
-                    Bachelor's degree, Computer Science and Engineering
-                  </p>
-                </li>
-
-                <li class="timeline-item">
-                  <h4 class="h4 timeline-item-title">Chattogram College</h4>
-                  <span>1999 — 2000</span>
-                  <p class="timeline-text">
-                    Higher Secondary School Certificate
-                  </p>
-                </li>
-
-                <li class="timeline-item">
-                  <h4 class="h4 timeline-item-title">
-                    Cox'sbazar Govt. High School
-                  </h4>
-                  <span>1997 —1998</span>
-                  <p class="timeline-text">Secondary School Certificate</p>
-                </li>
-              </ol>
+            <section class="about-text">
+              <p>
+                As a strategic and results-driven Head of Technology, I bring over
+                15 years of leadership experience in driving digital
+                transformation, architecting scalable solutions, and building
+                high-performing engineering teams. I specialize in aligning
+                technology strategy with business objectives, optimizing
+                operations, and fostering innovation across diverse industries.
+                With a proven track record in delivering complex, enterprise-grade
+                systems, I excel at transforming vision into execution through
+                strong governance, agile methodologies, and cross-functional
+                collaboration. My passion lies in leveraging technology as a
+                catalyst for growth, operational excellence, and competitive
+                advantage.
+              </p>
             </section>
 
-            <div class="service-item">
-              <section class="">
+            <section class="service">
+              <h3 class="h3 service-title">What I Do as a Technology Leader</h3>
+              <ul class="service-list">
+                <!-- Strategic Technology Leadership -->
+                <li class="service-item">
+                  <div class="service-icon-box">
+                    <i
+                      class="fa-solid fa-chess-king"
+                      style="color: #ffd43b; font-size: 35px"
+                    ></i>
+                  </div>
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Technology Leadership</h4>
+                    <p class="service-item-text">
+                      I define and drive the overall technology vision and roadmap
+                      to align with business strategy.
+                      <span class="more-text" style="display: none">
+                        As a technology leader, I focus on building
+                        high-performing engineering teams, fostering a culture of
+                        innovation, and ensuring technology investments deliver
+                        measurable business outcomes. I collaborate with
+                        cross-functional executives to identify growth
+                        opportunities, streamline operations, and adopt emerging
+                        technologies that keep the organization ahead of the
+                        curve.
+                      </span>
+                    </p>
+                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                      >Read More</a
+                    >
+                  </div>
+                </li>
+
+                <!-- Product & Project Governance -->
+                <li class="service-item">
+                  <div class="service-icon-box">
+                    <img
+                      src="./assets/images/icon-design.svg"
+                      alt="design icon"
+                      width="40"
+                    />
+                  </div>
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">
+                      Product & Project Governance
+                    </h4>
+                    <p class="service-item-text">
+                      I oversee product and project lifecycles from concept to
+                      launch, ensuring timely and value-driven delivery.
+                      <span class="more-text" style="display: none">
+                        My approach combines Agile leadership with business acumen
+                        to deliver complex projects on time and within budget. I
+                        establish governance frameworks, track KPIs, and mentor
+                        teams to maintain a balance between speed, quality, and
+                        innovation.
+                      </span>
+                    </p>
+                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                      >Read More</a
+                    >
+                  </div>
+                </li>
+
+                <!-- Solution Architecture -->
+                <li class="service-item">
+                  <div class="service-icon-box">
+                    <i
+                      class="fa-solid fa-code-branch"
+                      style="color: #ffd43b; font-size: 35px"
+                    ></i>
+                  </div>
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Solution Architecture</h4>
+                    <p class="service-item-text">
+                      I design scalable, secure, and efficient technology
+                      solutions that drive business performance.
+                      <span class="more-text" style="display: none">
+                        With expertise across modern stacks, I architect systems
+                        that are resilient, cloud-native, and cost-optimized. I
+                        ensure seamless integration between platforms, maintain
+                        compliance standards, and adopt best practices for
+                        maintainability and scalability.
+                      </span>
+                    </p>
+                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                      >Read More</a
+                    >
+                  </div>
+                </li>
+
+                <!-- Cloud & DevOps Strategy -->
+                <li class="service-item">
+                  <div class="service-icon-box">
+                    <i
+                      class="fa-solid fa-cloud"
+                      style="color: #ffd43b; font-size: 35px"
+                    ></i>
+                  </div>
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Cloud & DevOps Strategy</h4>
+                    <p class="service-item-text">
+                      I lead cloud transformation initiatives and implement DevOps
+                      culture across teams.
+                      <span class="more-text" style="display: none">
+                        My focus is on automation, CI/CD, infrastructure-as-code,
+                        and cloud governance across AWS, Azure, and GCP. I enable
+                        faster releases, improved reliability, and cost-efficient
+                        operations by leveraging modern DevOps tools and scalable
+                        cloud infrastructure strategies.
+                      </span>
+                    </p>
+                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                      >Read More</a
+                    >
+                  </div>
+                </li>
+
+                <!-- Innovation & R&D -->
+                <li class="service-item">
+                  <div class="service-icon-box">
+                    <i
+                      class="fa-solid fa-lightbulb"
+                      style="color: #ffd43b; font-size: 35px"
+                    ></i>
+                  </div>
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">
+                      Innovation & Emerging Tech
+                    </h4>
+                    <p class="service-item-text">
+                      I explore and implement emerging technologies to create new
+                      business opportunities.
+                      <span class="more-text" style="display: none">
+                        From AI and data analytics to blockchain and IoT, I drive
+                        R&D initiatives that improve customer experiences, enhance
+                        decision-making, and unlock new revenue streams. My goal
+                        is to keep the organization future-ready through a
+                        balanced approach to experimentation and value
+                        realization.
+                      </span>
+                    </p>
+                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                      >Read More</a
+                    >
+                  </div>
+                </li>
+
+                <!-- Digital Transformation & Strategy -->
+                <li class="service-item">
+                  <div class="service-icon-box">
+                    <i
+                      class="fa-solid fa-network-wired"
+                      style="color: #ffd43b; font-size: 35px"
+                    ></i>
+                  </div>
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">
+                      Digital Transformation & Strategy
+                    </h4>
+                    <p class="service-item-text">
+                      I lead enterprise-wide transformation initiatives that
+                      modernize systems and enhance customer value.
+                      <span class="more-text" style="display: none">
+                        I partner with business leaders to define digital
+                        strategies, redesign processes, and implement modern
+                        platforms that improve agility and performance. My focus
+                        is on driving change through innovation, data-driven
+                        decision-making, and adoption of emerging technologies —
+                        ensuring sustainable growth and competitive advantage.
+                      </span>
+                    </p>
+                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                      >Read More</a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            
+
+            <section class="skill">
+              <header>
+                <h2 class="h2 article-title">Skills</h2>
+                
+              </header>
+
+              <ul class="techstack-list content-card">
+                <!-- Programming Languages -->
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                    alt="PHP"
+                    title="PHP"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://laravel.com/img/logomark.min.svg"
+                    alt="Laravel"
+                    title="Laravel"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item medium">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                    alt="Python"
+                    title="Python"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item medium">
+                  <i
+                    class="fa-brands fa-java"
+                    title="Java"
+                    style="
+                      font-size: 45px;
+                      width: 45px;
+                      height: 45px;
+                      color: white;
+                    "
+                  ></i>
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript"
+                    title="JavaScript"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                    alt="TypeScript"
+                    title="TypeScript"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                    alt="GoLang"
+                    title="GoLang"
+                    class="tech-icon"
+                  />
+                </li>
+
+                <!-- Frameworks -->
+                <li class="techstack-item funnel-item small">
+                  <i
+                    class="fa fa-wordpress"
+                    title="WordPress"
+                    style="font-size: 50px; color: white"
+                  ></i>
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                    alt="Angular"
+                    title="Angular"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    alt="React"
+                    title="React"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                    alt="VueJS"
+                    title="VueJS"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                    alt="Node.js"
+                    title="Node.js"
+                    class="tech-icon"
+                  />
+                </li>
+
+                <!-- Backend / Architecture -->
+                <li class="techstack-item funnel-item medium">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                    alt="Docker"
+                    title="Docker"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item medium">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                    alt="Kubernetes"
+                    title="Kubernetes"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item medium">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
+                    alt="Nginx"
+                    title="Nginx"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item medium">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"
+                    alt="Apache"
+                    title="Apache"
+                    class="tech-icon"
+                  />
+                </li>
+
+                <!-- Databases -->
+                <li class="techstack-item funnel-item medium">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                    alt="MySQL"
+                    title="MySQL"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item medium">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                    alt="PostgreSQL"
+                    title="PostgreSQL"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item medium">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                    alt="MongoDB"
+                    title="MongoDB"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item medium">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                    alt="Redis"
+                    title="Redis"
+                    class="tech-icon"
+                  />
+                </li>
+
+                <!-- Cloud & DevOps -->
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://a0.awsstatic.com/libra-css/images/logos/aws_smile-header-desktop-en-white_59x35@2x.png"
+                    alt="AWS"
+                    title="AWS"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                    alt="Azure"
+                    title="Azure"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                    alt="GCP"
+                    title="Google Cloud"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
+                    alt="Terraform"
+                    title="Terraform"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg"
+                    alt="Ansible"
+                    title="Ansible"
+                    class="tech-icon"
+                  />
+                </li>
+
+                <!-- Tools & Management -->
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                    alt="Git"
+                    title="Git"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <i
+                    class="fa-brands fa-github"
+                    title="GitHub"
+                    style="font-size: 45px; color: white"
+                  ></i>
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg"
+                    alt="Bitbucket"
+                    title="Bitbucket"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
+                    alt="GitLab"
+                    title="GitLab"
+                    class="tech-icon"
+                  />
+                </li>
+
+                <!-- Collaboration -->
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+                    alt="Jira"
+                    title="Jira"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg"
+                    alt="Confluence"
+                    title="Confluence"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
+                    alt="Slack"
+                    title="Slack"
+                    class="tech-icon"
+                  />
+                </li>
+
+                <!-- IDEs -->
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                    alt="VS Code"
+                    title="VS Code"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phpstorm/phpstorm-original.svg"
+                    alt="PhpStorm"
+                    title="PhpStorm"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+                    alt="IntelliJ"
+                    title="IntelliJ IDEA"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
+                    alt="Eclipse"
+                    title="Eclipse"
+                    class="tech-icon"
+                  />
+                </li>
+
+                <!-- Data / AI -->
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                    alt="TensorFlow"
+                    title="TensorFlow"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                    alt="Pandas"
+                    title="Pandas"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                    alt="NumPy"
+                    title="NumPy"
+                    class="tech-icon"
+                  />
+                </li>
+
+                <!-- Other -->
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                    alt="Linux"
+                    title="Linux"
+                    class="tech-icon"
+                  />
+                </li>
+                <li class="techstack-item funnel-item small">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
+                    alt="Bash"
+                    title="Bash Scripting"
+                    class="tech-icon"
+                  />
+                </li>
+              </ul>
+            </section>
+
+            <div class="timeline-container">
+              <section class="timeline">
                 <div class="title-wrapper">
                   <div class="icon-box">
                     <ion-icon name="book-outline"></ion-icon>
                   </div>
-
-                  <h3 class="h3">Certificates</h3>
+                  <h3 class="h3">Experience</h3>
                 </div>
 
-                <div class="certification-preview">
-                  <div class="preview-list"></div>
-                  <div class="preview-item">
-                    <a
-                      href="assets/images/9.png"
-                      data-lightbox="certificates"
-                      data-title="Certificate 9"
-                    >
-                      <img
-                        src="assets/images/9.png"
-                        alt="Certificate 9"
-                        width="300"
-                        height="90%"
-                      />
-                    </a>
-                  </div>
-                  <div class="preview-item">
-                    <a
-                      href="assets/images/1.png"
-                      data-lightbox="certificates"
-                      data-title="Certificate 1"
-                    >
-                      <img
-                        src="assets/images/1.png"
-                        alt="Certificate 1"
-                        width="300"
-                        height="90%"
-                      />
-                    </a>
-                  </div>
-                  <div class="preview-item">
-                    <a
-                      href="assets/images/2.png"
-                      data-lightbox="certificates"
-                      data-title="Certificate 2"
-                    >
-                      <img
-                        src="assets/images/2.png"
-                        alt="Certificate 2"
-                        width="300"
-                        height="90%"
-                      />
-                    </a>
-                  </div>
-                  <div class="preview-item">
-                    <a
-                      href="assets/images/3.png"
-                      data-lightbox="certificates"
-                      data-title="Certificate 3"
-                    >
-                      <img
-                        src="assets/images/3.png"
-                        alt="Certificate 3"
-                        width="300"
-                        height="90%"
-                      />
-                    </a>
-                  </div>
+                <ol class="timeline-list">
+                  <li class="timeline-item">
+                    <div class="timeline-content">
+                      <a href="https://questbdc.com/" target="_blank">
+                        <img
+                          src="https://questbdc.com/assets/img/quest-logo.png"
+                          alt="Quest BDC PLC Logo"
+                          class="company-logo"
+                        />
+                      </a>
+                      <div class="timeline-text">
+                        <h4 class="h4 timeline-item-title">Head of Technology</h4>
+                        <h5 class="h4 timeline-item-title">
+                          <a href="https://questbdc.com/" target="_blank"
+                            >Quest BDC PLC</a
+                          >
+                        </h5>
+                        <span>May 2023 - Continuing</span>
+                      </div>
+                    </div>
+                  </li>
 
-                  <div class="preview-item">
-                    <a
-                      href="assets/images/6.png"
-                      data-lightbox="certificates"
-                      data-title="Certificate 6"
-                    >
-                      <img
-                        src="assets/images/6.png"
-                        alt="Certificate 6"
-                        width="300"
-                        height="0%"
-                      />
-                    </a>
+                  <li class="timeline-item">
+                    <div class="timeline-content">
+                      <a href="https://www.medinatech.co/" target="_blank">
+                        <img
+                          src="https://www.medinatech.co/skins/logo.svg"
+                          alt="Medina Tech Ltd. Logo"
+                          class="company-logo"
+                        />
+                      </a>
+                      <div class="timeline-text">
+                        <h4 class="h4 timeline-item-title">
+                          Chief Technology Officer
+                        </h4>
+                        <h5 class="h4 timeline-item-title">
+                          <a href="https://www.medinatech.co/" target="_blank"
+                            >Medina Tech Ltd.</a
+                          >
+                        </h5>
+                        <span>Jan 2021 - April 2023</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="timeline-item">
+                    <div class="timeline-content">
+                      <a href="https://www.brac.net/" target="_blank">
+                        <img
+                          src="https://www.brac.net/templates/saga/home-template/img/logo.png"
+                          alt="BRAC Logo"
+                          class="company-logo"
+                        />
+                      </a>
+                      <div class="timeline-text">
+                        <h4 class="h4 timeline-item-title">Senior Manager</h4>
+                        <h5 class="h4 timeline-item-title">
+                          <a href="https://www.brac.net/" target="_blank">BRAC</a>
+                        </h5>
+                        <span>Jan 2019 — Oct 2020</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="timeline-item">
+                    <div class="timeline-content">
+                      <a href="https://www.brac.net/" target="_blank">
+                        <img
+                          src="https://www.brac.net/templates/saga/home-template/img/logo.png"
+                          alt="BRAC Logo"
+                          class="company-logo"
+                        />
+                      </a>
+                      <div class="timeline-text">
+                        <h4 class="h4 timeline-item-title">
+                          Lead Software Engineer
+                        </h4>
+                        <h5 class="h4 timeline-item-title">
+                          <a href="https://www.brac.net/" target="_blank">BRAC</a>
+                        </h5>
+                        <span>Jan 2012 — Dec 2018</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="timeline-item">
+                    <div class="timeline-content">
+                      <a href="https://www.grameensolutions.com/" target="_blank">
+                        <img
+                          src="https://socialbusinesspedia.com/uploads/organization/166/logo/original/logo_5354d7356f4f6.png"
+                          alt="Grameen Solutions Logo"
+                          class="company-logo"
+                        />
+                      </a>
+                      <div class="timeline-text">
+                        <h4 class="h4 timeline-item-title">
+                          Principal Software Engineer
+                        </h4>
+                        <h5 class="h4 timeline-item-title">
+                          <a
+                            href="https://www.grameensolutions.com/"
+                            target="_blank"
+                            >Grameen Solutions</a
+                          >
+                        </h5>
+                        <span>Jun 2008 — Dec 2011</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="timeline-item">
+                    <div class="timeline-content">
+                      <a href="https://www.evoknow.com/" target="_blank">
+                        <img
+                          src="https://cdn-images-1.medium.com/max/400/1*AF-NU2c22u-9pUTg44d5Ag@2x.png"
+                          alt="Evoknow, Inc. Logo"
+                          class="company-logo"
+                        />
+                      </a>
+                      <div class="timeline-text">
+                        <h4 class="h4 timeline-item-title">Lead Developer</h4>
+                        <h5 class="h4 timeline-item-title">
+                          <a href="https://www.evoknow.com/" target="_blank"
+                            >Evoknow, Inc.</a
+                          >
+                        </h5>
+                        <span>Nov 2006 — May 2008</span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+
+                <div class="title-wrapper">
+                  <div class="icon-box">
+                    <ion-icon name="book-outline"></ion-icon>
                   </div>
+                  <h3 class="h3">Education</h3>
                 </div>
+
+                <ol class="timeline-list">
+                  <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">
+                      International Islamic University Chittagong
+                    </h4>
+                    <span>2002 - 2006</span>
+                    <p class="timeline-text">
+                      Bachelor's degree, Computer Science and Engineering
+                    </p>
+                  </li>
+
+                  <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">Chattogram College</h4>
+                    <span>1999 — 2000</span>
+                    <p class="timeline-text">
+                      Higher Secondary School Certificate
+                    </p>
+                  </li>
+
+                  <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">
+                      Cox'sbazar Govt. High School
+                    </h4>
+                    <span>1997 —1998</span>
+                    <p class="timeline-text">Secondary School Certificate</p>
+                  </li>
+                </ol>
               </section>
+
+              <div class="service-item">
+                <section class="">
+                  <div class="title-wrapper">
+                    <div class="icon-box">
+                      <ion-icon name="book-outline"></ion-icon>
+                    </div>
+
+                    <h3 class="h3">Certificates</h3>
+                  </div>
+
+                  <div class="certification-preview">
+                    <div class="preview-list"></div>
+                    <div class="preview-item">
+                      <a
+                        href="assets/images/9.png"
+                        data-lightbox="certificates"
+                        data-title="Certificate 9"
+                      >
+                        <img
+                          src="assets/images/9.png"
+                          alt="Certificate 9"
+                          width="300"
+                          height="90%"
+                        />
+                      </a>
+                    </div>
+                    <div class="preview-item">
+                      <a
+                        href="assets/images/1.png"
+                        data-lightbox="certificates"
+                        data-title="Certificate 1"
+                      >
+                        <img
+                          src="assets/images/1.png"
+                          alt="Certificate 1"
+                          width="300"
+                          height="90%"
+                        />
+                      </a>
+                    </div>
+                    <div class="preview-item">
+                      <a
+                        href="assets/images/2.png"
+                        data-lightbox="certificates"
+                        data-title="Certificate 2"
+                      >
+                        <img
+                          src="assets/images/2.png"
+                          alt="Certificate 2"
+                          width="300"
+                          height="90%"
+                        />
+                      </a>
+                    </div>
+                    <div class="preview-item">
+                      <a
+                        href="assets/images/3.png"
+                        data-lightbox="certificates"
+                        data-title="Certificate 3"
+                      >
+                        <img
+                          src="assets/images/3.png"
+                          alt="Certificate 3"
+                          width="300"
+                          height="90%"
+                        />
+                      </a>
+                    </div>
+
+                    <div class="preview-item">
+                      <a
+                        href="assets/images/6.png"
+                        data-lightbox="certificates"
+                        data-title="Certificate 6"
+                      >
+                        <img
+                          src="assets/images/6.png"
+                          alt="Certificate 6"
+                          width="300"
+                          height="0%"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </section>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        
-        </article>
-      </div>
-    </main>
+          
+          </article>
+        </div>
+      </main>
 
-    <script src="./assets/js/script.js"></script>
+      <script src="./assets/js/script.js"></script>
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+    </body>
 </html>
 
