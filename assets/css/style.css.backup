@@ -2131,37 +2131,6 @@ textarea.form-input::-webkit-resizer {
     transform: scale(1.1);
   }
 
-  /* Mobile optimization for tech stack - Force override */
-  @media screen and (max-width: 768px) {
-    .techstack-list.content-card {
-      display: grid !important;
-      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)) !important;
-      gap: 15px !important;
-      justify-items: center !important;
-      padding: 15px 10px 15px 10px !important;
-      flex-wrap: unset !important;
-      justify-content: unset !important;
-    }
-    
-    .techstack-list.content-card .tech-icon {
-      width: 45px !important;
-      height: 45px !important;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .techstack-list.content-card {
-      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)) !important;
-      gap: 12px !important;
-      padding: 15px 5px 15px 5px !important;
-    }
-    
-    .techstack-list.content-card .tech-icon {
-      width: 40px !important;
-      height: 40px !important;
-    }
-  }
-
   /* Timeline Container */
   .timeline-container {
     display: flex; /* Flexbox for side-by-side layout */

@@ -59,11 +59,19 @@
       <link rel="stylesheet" href="./assets/css/style.css" />
     </noscript>
   
-    <!-- ✅ Google Fonts -->
+    <!-- ✅ Google Fonts (Non-blocking) -->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
   
     <!-- ✅ Font Awesome (Non-blocking) -->
     <link
@@ -116,6 +124,30 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"
       defer
     ></script>
+    <script>
+      // Configure lightbox to fix SEO issues
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof lightbox !== 'undefined') {
+          lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showImageNumberLabel': false,
+            'alwaysShowNavOnTouchDevices': true,
+            'disableScrolling': true
+          });
+          
+          // Fix uncrawlable links by adding proper href attributes
+          document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('lb-cancel') || e.target.classList.contains('lb-close')) {
+              e.preventDefault();
+              if (typeof lightbox !== 'undefined') {
+                lightbox.end();
+              }
+            }
+          });
+        }
+      });
+    </script>
   
     <!-- ✅ Social Media Meta -->
     <meta property="og:type" content="website" />
@@ -321,7 +353,7 @@
                         curve.
                       </span>
                     </p>
-                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                    <a href="javascript:void(0)" class="read-more" onclick="toggleReadMore(event)"
                       >Read More</a
                     >
                   </div>
@@ -351,7 +383,7 @@
                         innovation.
                       </span>
                     </p>
-                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                    <a href="javascript:void(0)" class="read-more" onclick="toggleReadMore(event)"
                       >Read More</a
                     >
                   </div>
@@ -378,7 +410,7 @@
                         maintainability and scalability.
                       </span>
                     </p>
-                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                    <a href="javascript:void(0)" class="read-more" onclick="toggleReadMore(event)"
                       >Read More</a
                     >
                   </div>
@@ -405,7 +437,7 @@
                         cloud infrastructure strategies.
                       </span>
                     </p>
-                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                    <a href="javascript:void(0)" class="read-more" onclick="toggleReadMore(event)"
                       >Read More</a
                     >
                   </div>
@@ -435,7 +467,7 @@
                         realization.
                       </span>
                     </p>
-                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                    <a href="javascript:void(0)" class="read-more" onclick="toggleReadMore(event)"
                       >Read More</a
                     >
                   </div>
@@ -465,7 +497,7 @@
                         ensuring sustainable growth and competitive advantage.
                       </span>
                     </p>
-                    <a href="#" class="read-more" onclick="toggleReadMore(event)"
+                    <a href="javascript:void(0)" class="read-more" onclick="toggleReadMore(event)"
                       >Read More</a
                     >
                   </div>
@@ -481,7 +513,7 @@
                 
               </header>
 
-              <ul class="techstack-list content-card">
+              <ul class="techstack-list content-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 15px; justify-items: center;">
                 <!-- Programming Languages -->
                 <li class="techstack-item funnel-item small">
                   <img
@@ -489,6 +521,9 @@
                     alt="PHP"
                     title="PHP"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -497,6 +532,9 @@
                     alt="Laravel"
                     title="Laravel"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item medium">
@@ -505,6 +543,9 @@
                     alt="Python"
                     title="Python"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item medium">
@@ -525,6 +566,9 @@
                     alt="JavaScript"
                     title="JavaScript"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -533,6 +577,9 @@
                     alt="TypeScript"
                     title="TypeScript"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -541,6 +588,9 @@
                     alt="GoLang"
                     title="GoLang"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
 
@@ -558,6 +608,9 @@
                     alt="Angular"
                     title="Angular"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -566,6 +619,9 @@
                     alt="React"
                     title="React"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -574,6 +630,9 @@
                     alt="VueJS"
                     title="VueJS"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -582,6 +641,9 @@
                     alt="Node.js"
                     title="Node.js"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
 
@@ -592,6 +654,9 @@
                     alt="Docker"
                     title="Docker"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item medium">
@@ -600,6 +665,9 @@
                     alt="Kubernetes"
                     title="Kubernetes"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item medium">
@@ -608,6 +676,9 @@
                     alt="Nginx"
                     title="Nginx"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item medium">
@@ -616,6 +687,9 @@
                     alt="Apache"
                     title="Apache"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
 
@@ -626,6 +700,9 @@
                     alt="MySQL"
                     title="MySQL"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item medium">
@@ -634,6 +711,9 @@
                     alt="PostgreSQL"
                     title="PostgreSQL"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item medium">
@@ -642,6 +722,9 @@
                     alt="MongoDB"
                     title="MongoDB"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item medium">
@@ -650,6 +733,9 @@
                     alt="Redis"
                     title="Redis"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
 
@@ -660,6 +746,9 @@
                     alt="AWS"
                     title="AWS"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -668,6 +757,9 @@
                     alt="Azure"
                     title="Azure"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -676,6 +768,9 @@
                     alt="GCP"
                     title="Google Cloud"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -684,6 +779,9 @@
                     alt="Terraform"
                     title="Terraform"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -692,6 +790,9 @@
                     alt="Ansible"
                     title="Ansible"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
 
@@ -702,6 +803,9 @@
                     alt="Git"
                     title="Git"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -717,6 +821,9 @@
                     alt="Bitbucket"
                     title="Bitbucket"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -725,6 +832,9 @@
                     alt="GitLab"
                     title="GitLab"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
 
@@ -735,6 +845,9 @@
                     alt="Jira"
                     title="Jira"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -743,6 +856,9 @@
                     alt="Confluence"
                     title="Confluence"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -751,6 +867,9 @@
                     alt="Slack"
                     title="Slack"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
 
@@ -761,6 +880,9 @@
                     alt="VS Code"
                     title="VS Code"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -769,6 +891,9 @@
                     alt="PhpStorm"
                     title="PhpStorm"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -777,6 +902,9 @@
                     alt="IntelliJ"
                     title="IntelliJ IDEA"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -785,6 +913,9 @@
                     alt="Eclipse"
                     title="Eclipse"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
 
@@ -795,6 +926,9 @@
                     alt="TensorFlow"
                     title="TensorFlow"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -803,6 +937,9 @@
                     alt="Pandas"
                     title="Pandas"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -811,6 +948,9 @@
                     alt="NumPy"
                     title="NumPy"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
 
@@ -821,6 +961,9 @@
                     alt="Linux"
                     title="Linux"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
                 <li class="techstack-item funnel-item small">
@@ -829,6 +972,9 @@
                     alt="Bash"
                     title="Bash Scripting"
                     class="tech-icon"
+                    width="50"
+                    height="50"
+                    loading="lazy"
                   />
                 </li>
               </ul>
@@ -851,6 +997,9 @@
                           src="https://questbdc.com/assets/img/quest-logo.png"
                           alt="Quest BDC PLC Logo"
                           class="company-logo"
+                          width="85"
+                          height="auto"
+                          loading="lazy"
                         />
                       </a>
                       <div class="timeline-text">
@@ -872,6 +1021,9 @@
                           src="https://www.medinatech.co/skins/logo.svg"
                           alt="Medina Tech Ltd. Logo"
                           class="company-logo"
+                          width="85"
+                          height="auto"
+                          loading="lazy"
                         />
                       </a>
                       <div class="timeline-text">
@@ -895,6 +1047,9 @@
                           src="https://www.brac.net/templates/saga/home-template/img/logo.png"
                           alt="BRAC Logo"
                           class="company-logo"
+                          width="85"
+                          height="auto"
+                          loading="lazy"
                         />
                       </a>
                       <div class="timeline-text">
@@ -914,6 +1069,9 @@
                           src="https://www.brac.net/templates/saga/home-template/img/logo.png"
                           alt="BRAC Logo"
                           class="company-logo"
+                          width="85"
+                          height="auto"
+                          loading="lazy"
                         />
                       </a>
                       <div class="timeline-text">
@@ -935,6 +1093,9 @@
                           src="https://socialbusinesspedia.com/uploads/organization/166/logo/original/logo_5354d7356f4f6.png"
                           alt="Grameen Solutions Logo"
                           class="company-logo"
+                          width="85"
+                          height="auto"
+                          loading="lazy"
                         />
                       </a>
                       <div class="timeline-text">
@@ -960,6 +1121,9 @@
                           src="https://cdn-images-1.medium.com/max/400/1*AF-NU2c22u-9pUTg44d5Ag@2x.png"
                           alt="Evoknow, Inc. Logo"
                           class="company-logo"
+                          width="85"
+                          height="auto"
+                          loading="lazy"
                         />
                       </a>
                       <div class="timeline-text">
@@ -1033,7 +1197,8 @@
                           src="assets/images/9.png"
                           alt="Certificate 9"
                           width="300"
-                          height="90%"
+                          height="200"
+                          loading="lazy"
                         />
                       </a>
                     </div>
@@ -1047,7 +1212,8 @@
                           src="assets/images/1.png"
                           alt="Certificate 1"
                           width="300"
-                          height="90%"
+                          height="200"
+                          loading="lazy"
                         />
                       </a>
                     </div>
@@ -1061,7 +1227,8 @@
                           src="assets/images/2.png"
                           alt="Certificate 2"
                           width="300"
-                          height="90%"
+                          height="200"
+                          loading="lazy"
                         />
                       </a>
                     </div>
@@ -1075,7 +1242,8 @@
                           src="assets/images/3.png"
                           alt="Certificate 3"
                           width="300"
-                          height="90%"
+                          height="200"
+                          loading="lazy"
                         />
                       </a>
                     </div>
@@ -1090,7 +1258,8 @@
                           src="assets/images/6.png"
                           alt="Certificate 6"
                           width="300"
-                          height="0%"
+                          height="200"
+                          loading="lazy"
                         />
                       </a>
                     </div>
@@ -1105,7 +1274,7 @@
         </div>
       </main>
 
-      <script src="./assets/js/script.js"></script>
+      <script src="./assets/js/script.optimized.js" defer></script>
 
       <script
         type="module"
