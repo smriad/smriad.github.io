@@ -37,6 +37,7 @@
 .fa-solid.fa-cloud:before { content: '☁️'; }
 .fa-solid.fa-lightbulb:before { content: '💡'; }
 .fa-solid.fa-network-wired:before { content: '🔗'; }
+.fa-solid.fa-clipboard-list:before { content: '📋'; }
 .fa-brands.fa-java:before { content: '☕'; }
 .fa-brands.fa-github:before { content: '🐙'; }
 .fa.fa-wordpress:before { content: '📝'; }
