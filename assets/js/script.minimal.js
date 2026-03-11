@@ -9,8 +9,7 @@ function toggleReadMore(event) {
     event.preventDefault();
   }
 
-  // In inline onclick, `this` is the anchor element
-  const trigger = this;
+  const trigger = event && event.currentTarget ? event.currentTarget : null;
   if (!trigger) return;
 
   // Look for the corresponding .more-text inside the same service-content-box
@@ -32,3 +31,11 @@ function toggleReadMore(event) {
     trigger.textContent = 'Read Less';
   }
 }
+
+// Attach click handlers once DOM is ready
+document.addEventListener('DOMContentLoaded', function () {
+  var links = document.querySelectorAll('.read-more');
+  links.forEach(function (link) {
+    link.addEventListener('click', toggleReadMore);
+  });
+});
