@@ -4,12 +4,8 @@ const sidebar = document.querySelector('[data-sidebar]');
 const sidebarBtn = document.querySelector('[data-sidebar-btn]');
 if (sidebarBtn) sidebarBtn.addEventListener('click', () => elementToggleFunc(sidebar));
 
-function toggleReadMore(event) {
-  if (event && event.preventDefault) {
-    event.preventDefault();
-  }
-
-  const trigger = event && event.currentTarget ? event.currentTarget : null;
+function toggleReadMore(event, trigger) {
+  if (event && event.preventDefault) event.preventDefault();
   if (!trigger) return;
 
   // Look for the corresponding .more-text inside the same service-content-box
@@ -32,10 +28,9 @@ function toggleReadMore(event) {
   }
 }
 
-// Attach click handlers once DOM is ready
-document.addEventListener('DOMContentLoaded', function () {
-  var links = document.querySelectorAll('.read-more');
-  links.forEach(function (link) {
-    link.addEventListener('click', toggleReadMore);
-  });
+// Delegated handler works for all current/future read-more links
+document.addEventListener('click', function (event) {
+  var trigger = event.target.closest('.read-more');
+  if (!trigger) return;
+  toggleReadMore(event, trigger);
 });
