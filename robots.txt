@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smriad.github.io/sitemap-index.xml
