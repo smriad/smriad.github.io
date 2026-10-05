@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Story GIF preview</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        gap: 24px;
+        padding: 24px;
+        background: #111;
+        font-family: system-ui, sans-serif;
+        color: #8b8b9e;
+      }
+      img,
+      iframe {
+        max-height: 90vh;
+        border-radius: 16px;
+        box-shadow: 0 0 40px rgba(34, 211, 238, 0.15);
+      }
+      a {
+        color: #22d3ee;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        justify-content: center;
+        align-items: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div>
+        <p>Animated GIF (Facebook Story · 1080×1920)</p>
+        <img src="/images/social/portfolio-story.gif" width="405" alt="Portfolio story GIF" />
+        <p><a href="/images/social/portfolio-story.gif" download>Download portfolio-story.gif</a></p>
+      </div>
+      <div>
+        <p>Live frame template</p>
+        <iframe src="/social/story-gif.html" width="405" height="720" title="Story animation"></iframe>
+      </div>
+    </div>
+    <p>
+      <a href="/social/photocollage-desktop.html">Desktop photocollage (live)</a> ·
+      <a href="/images/social/photocollage-desktop.png">Download desktop PNG</a>
+    </p>
+    <p>
+      <a href="/social/collage-recursive.html">Story mosaic</a> ·
+      <code>npm run social:photocollage</code> — desktop full-page capture + render
+    </p>
+  </body>
+</html>

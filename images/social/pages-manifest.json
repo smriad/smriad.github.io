@@ -1,0 +1,275 @@
+{
+  "baseUrl": "http://127.0.0.1:4321",
+  "viewportWidth": 1080,
+  "deviceScaleFactor": 2,
+  "fullPage": true,
+  "pages": [
+    {
+      "slug": "home",
+      "label": "Home",
+      "href": "/",
+      "file": "/images/social/pages/home.png",
+      "fullPage": true,
+      "deviceScaleFactor": 2,
+      "cssSize": {
+        "width": 1080,
+        "height": 1388
+      },
+      "pixelSize": {
+        "width": 2160,
+        "height": 2776
+      },
+      "capturedAt": "2026-09-27T20:49:24.139Z",
+      "source": "https://smriad.github.io/"
+    },
+    {
+      "slug": "work",
+      "label": "Work",
+      "href": "/work/",
+      "file": "/images/social/pages/work.png",
+      "fullPage": true,
+      "deviceScaleFactor": 2,
+      "cssSize": {
+        "width": 1080,
+        "height": 3061
+      },
+      "pixelSize": {
+        "width": 2160,
+        "height": 6122
+      },
+      "capturedAt": "2026-09-27T20:49:26.044Z",
+      "source": "https://smriad.github.io/work/"
+    },
+    {
+      "slug": "reviews",
+      "label": "Testimonials",
+      "href": "/reviews/",
+      "file": "/images/social/pages/reviews.png",
+      "fullPage": true,
+      "deviceScaleFactor": 2,
+      "cssSize": {
+        "width": 1080,
+        "height": 3316
+      },
+      "pixelSize": {
+        "width": 2160,
+        "height": 6632
+      },
+      "capturedAt": "2026-09-27T20:49:28.164Z",
+      "source": "https://smriad.github.io/reviews/"
+    },
+    {
+      "slug": "stack",
+      "label": "Stack",
+      "href": "/engineering/",
+      "file": "/images/social/pages/stack.png",
+      "fullPage": true,
+      "deviceScaleFactor": 2,
+      "cssSize": {
+        "width": 1080,
+        "height": 3153
+      },
+      "pixelSize": {
+        "width": 2160,
+        "height": 6306
+      },
+      "capturedAt": "2026-09-27T20:49:30.167Z",
+      "source": "https://smriad.github.io/engineering/"
+    },
+    {
+      "slug": "timeline",
+      "label": "Timeline",
+      "href": "/experience/",
+      "file": "/images/social/pages/timeline.png",
+      "fullPage": true,
+      "deviceScaleFactor": 2,
+      "cssSize": {
+        "width": 1080,
+        "height": 2334
+      },
+      "pixelSize": {
+        "width": 2160,
+        "height": 4668
+      },
+      "capturedAt": "2026-09-27T20:49:31.884Z",
+      "source": "https://smriad.github.io/experience/"
+    },
+    {
+      "slug": "github",
+      "label": "GitHub",
+      "href": "/github/",
+      "file": "/images/social/pages/github.png",
+      "fullPage": true,
+      "deviceScaleFactor": 2,
+      "cssSize": {
+        "width": 1080,
+        "height": 1695
+      },
+      "pixelSize": {
+        "width": 2160,
+        "height": 3390
+      },
+      "capturedAt": "2026-09-27T20:49:33.556Z",
+      "source": "https://smriad.github.io/github/"
+    },
+    {
+      "slug": "coding",
+      "label": "Coding",
+      "href": "/coding/",
+      "file": "/images/social/pages/coding.png",
+      "fullPage": true,
+      "deviceScaleFactor": 2,
+      "cssSize": {
+        "width": 1080,
+        "height": 2094
+      },
+      "pixelSize": {
+        "width": 2160,
+        "height": 4188
+      },
+      "capturedAt": "2026-09-27T20:49:35.263Z",
+      "source": "https://smriad.github.io/coding/"
+    },
+    {
+      "slug": "contact",
+      "label": "Contact",
+      "href": "/contact/",
+      "file": "/images/social/pages/contact.png",
+      "fullPage": true,
+      "deviceScaleFactor": 2,
+      "cssSize": {
+        "width": 1080,
+        "height": 1266
+      },
+      "pixelSize": {
+        "width": 2160,
+        "height": 2532
+      },
+      "capturedAt": "2026-09-27T20:49:37.147Z",
+      "source": "https://smriad.github.io/contact/"
+    }
+  ],
+  "desktop": {
+    "viewportWidth": 1440,
+    "deviceScaleFactor": 2,
+    "fullPage": false,
+    "contentClip": true,
+    "pages": [
+      {
+        "slug": "home",
+        "label": "Home",
+        "href": "/",
+        "file": "/images/social/desktop/home.png",
+        "fullPage": false,
+        "contentClip": true,
+        "deviceScaleFactor": 2,
+        "cssSize": {
+          "width": 1440,
+          "height": 1388
+        },
+        "capturedAt": "2026-09-27T21:04:32.477Z",
+        "source": "http://127.0.0.1:4321/"
+      },
+      {
+        "slug": "work",
+        "label": "Work",
+        "href": "/work/",
+        "file": "/images/social/desktop/work.png",
+        "fullPage": false,
+        "contentClip": true,
+        "deviceScaleFactor": 2,
+        "cssSize": {
+          "width": 1440,
+          "height": 2878
+        },
+        "capturedAt": "2026-09-27T21:04:34.409Z",
+        "source": "http://127.0.0.1:4321/work/"
+      },
+      {
+        "slug": "reviews",
+        "label": "Testimonials",
+        "href": "/reviews/",
+        "file": "/images/social/desktop/reviews.png",
+        "fullPage": true,
+        "deviceScaleFactor": 2,
+        "cssSize": {
+          "width": 1440,
+          "height": 3225
+        },
+        "capturedAt": "2026-09-27T20:55:45.449Z",
+        "source": "https://smriad.github.io/reviews/"
+      },
+      {
+        "slug": "stack",
+        "label": "Stack",
+        "href": "/engineering/",
+        "file": "/images/social/desktop/stack.png",
+        "fullPage": false,
+        "contentClip": true,
+        "deviceScaleFactor": 2,
+        "cssSize": {
+          "width": 1440,
+          "height": 2896
+        },
+        "capturedAt": "2026-09-27T21:04:36.497Z",
+        "source": "http://127.0.0.1:4321/engineering/"
+      },
+      {
+        "slug": "timeline",
+        "label": "Timeline",
+        "href": "/experience/",
+        "file": "/images/social/desktop/timeline.png",
+        "fullPage": true,
+        "deviceScaleFactor": 2,
+        "cssSize": {
+          "width": 1440,
+          "height": 2316
+        },
+        "capturedAt": "2026-09-27T20:55:49.491Z",
+        "source": "https://smriad.github.io/experience/"
+      },
+      {
+        "slug": "github",
+        "label": "GitHub",
+        "href": "/github/",
+        "file": "/images/social/desktop/github.png",
+        "fullPage": true,
+        "deviceScaleFactor": 2,
+        "cssSize": {
+          "width": 1440,
+          "height": 1695
+        },
+        "capturedAt": "2026-09-27T20:55:51.312Z",
+        "source": "https://smriad.github.io/github/"
+      },
+      {
+        "slug": "coding",
+        "label": "Coding",
+        "href": "/coding/",
+        "file": "/images/social/desktop/coding.png",
+        "fullPage": true,
+        "deviceScaleFactor": 2,
+        "cssSize": {
+          "width": 1440,
+          "height": 2094
+        },
+        "capturedAt": "2026-09-27T20:55:53.183Z",
+        "source": "https://smriad.github.io/coding/"
+      },
+      {
+        "slug": "contact",
+        "label": "Contact",
+        "href": "/contact/",
+        "file": "/images/social/desktop/contact.png",
+        "fullPage": true,
+        "deviceScaleFactor": 2,
+        "cssSize": {
+          "width": 1440,
+          "height": 1266
+        },
+        "capturedAt": "2026-09-27T20:55:54.991Z",
+        "source": "https://smriad.github.io/contact/"
+      }
+    ]
+  }
+}

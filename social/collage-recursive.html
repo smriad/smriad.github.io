@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Recursive site collage</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Instrument+Sans:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #07070b;
+        font-family: 'Instrument Sans', system-ui, sans-serif;
+        color: #fff;
+      }
+      .bg {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 90% 60% at 50% 0%, rgba(34, 211, 238, 0.12), transparent 55%),
+          radial-gradient(ellipse 70% 50% at 100% 100%, rgba(167, 139, 250, 0.1), transparent 50%);
+      }
+      .shell {
+        position: relative;
+        z-index: 1;
+        width: 1080px;
+        height: 1920px;
+        padding: 48px 40px 56px;
+        display: flex;
+        flex-direction: column;
+      }
+      .head {
+        margin-bottom: 28px;
+      }
+      .head p {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 20px;
+        color: #22d3ee;
+        margin-bottom: 8px;
+      }
+      .head h1 {
+        font-size: 52px;
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+      }
+      .head .sub {
+        margin-top: 10px;
+        font-size: 22px;
+        color: #8b8b9e;
+      }
+      .mosaic {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 14px;
+        min-height: 0;
+      }
+      .tile {
+        position: relative;
+        border-radius: 16px;
+        border: 1px solid rgba(34, 211, 238, 0.25);
+        background: #12121a;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+      }
+      .tile img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: top center;
+        display: block;
+        image-rendering: auto;
+        background: #0a0a0f;
+      }
+      .tile-label {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 8px 10px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        color: #e2e8f0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+      }
+      /* Center: recursive nested mosaic */
+      .tile-nest {
+        grid-column: 2;
+        grid-row: 2;
+        padding: 10px;
+        background: #0c0c12;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 6px;
+      }
+      .tile-nest .mini {
+        border-radius: 8px;
+        border: 1px solid rgba(34, 211, 238, 0.2);
+        overflow: hidden;
+        position: relative;
+      }
+      .tile-nest .mini img {
+        object-fit: contain;
+        object-position: top center;
+        background: #0a0a0f;
+      }
+      .tile-nest .mini-nest {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3px;
+        padding: 4px;
+        background: #08080c;
+        border-radius: 6px;
+        border: 1px dashed rgba(34, 211, 238, 0.35);
+      }
+      .tile-nest .micro {
+        aspect-ratio: 9/16;
+        border-radius: 4px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .tile-nest .micro img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: top center;
+        background: #0a0a0f;
+      }
+      .foot {
+        margin-top: 24px;
+        text-align: center;
+      }
+      .url {
+        display: inline-block;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 34px;
+        font-weight: 500;
+        color: #0a0a0f;
+        background: #22d3ee;
+        padding: 16px 40px;
+        border-radius: 14px;
+        box-shadow: 0 0 40px rgba(34, 211, 238, 0.4);
+      }
+      .foot p {
+        margin-top: 14px;
+        font-size: 18px;
+        color: #8b8b9e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="shell">
+      <header class="head">
+        <p>$ find ~/routes -type f -name '*.html' | wc -l</p>
+        <h1>Full site collage</h1>
+        <p class="sub" id="subtitle">Live captures · smriad.github.io</p>
+      </header>
+      <div class="mosaic" id="mosaic"></div>
+      <footer class="foot">
+        <div class="url">smriad.github.io</div>
+        <p>Recursive preview — every main route</p>
+      </footer>
+    </div>
+    <script type="module">
+      const fallback = [
+        { slug: 'home', label: 'Home', file: '/images/social/home.png' },
+        { slug: 'work', label: 'Work', file: '/images/social/work.png' },
+        { slug: 'timeline', label: 'Timeline', file: '/images/social/experience.png' },
+      ];
+      let pages = fallback;
+      try {
+        const res = await fetch('/images/social/pages-manifest.json');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.pages?.length) pages = data.pages;
+        }
+      } catch {
+        /* use fallback */
+      }
+
+      const mosaic = document.getElementById('mosaic');
+      const outerOrder = [0, 1, 2, 3, 'nest', 4, 5, 6, 7];
+      const labels = pages.map((p) => p.label);
+
+      outerOrder.forEach((slot, idx) => {
+        if (slot === 'nest') {
+          const nest = document.createElement('div');
+          nest.className = 'tile tile-nest';
+          const pick = (i) => pages[i % pages.length];
+          nest.innerHTML = `
+            <div class="mini"><img src="${pick(0).file}" alt="" /></div>
+            <div class="mini"><img src="${pick(1).file}" alt="" /></div>
+            <div class="mini"><img src="${pick(2).file}" alt="" /></div>
+            <div class="mini"><img src="${pick(3).file}" alt="" /></div>
+            <div class="mini-nest">
+              ${pages
+                .slice(0, 8)
+                .map(
+                  (p) =>
+                    `<div class="micro"><img src="${p.file}" alt="${p.label}" /></div>`,
+                )
+                .join('')}
+            </div>`;
+          mosaic.appendChild(nest);
+          return;
+        }
+        const p = pages[slot] ?? pages[slot % pages.length];
+        const tile = document.createElement('div');
+        tile.className = 'tile';
+        tile.innerHTML = `<img src="${p.file}" alt="${p.label}" /><span class="tile-label">~/${p.slug === 'home' ? '' : p.slug}</span>`;
+        mosaic.appendChild(tile);
+      });
+
+      document.getElementById('subtitle').textContent = `${pages.length} routes · live viewport 1080×1920`;
+    </script>
+  </body>
+</html>

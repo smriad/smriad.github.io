@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Desktop photocollage — SM Riad</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #060608;
+        font-family: 'Instrument Sans', system-ui, sans-serif;
+        color: #fff;
+      }
+      .mesh {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 70% 55% at 15% 10%, rgba(34, 211, 238, 0.18), transparent 50%),
+          radial-gradient(ellipse 60% 50% at 90% 85%, rgba(167, 139, 250, 0.14), transparent 45%),
+          linear-gradient(165deg, #060608 0%, #0a0a12 45%, #07070b 100%);
+      }
+      .grid-bg {
+        position: absolute;
+        inset: 0;
+        opacity: 0.22;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 64px 64px;
+        mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, black, transparent);
+      }
+      .frame {
+        position: relative;
+        z-index: 1;
+        width: 1080px;
+        height: 1920px;
+        /* FB Story safe zone (profile ring, reply bar) */
+        padding: 72px 28px 96px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .top {
+        flex-shrink: 0;
+      }
+      .brand h1 {
+        font-size: 22px;
+        letter-spacing: -0.03em;
+        font-weight: 700;
+      }
+      .brand p {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        color: #22d3ee;
+        margin-top: 4px;
+      }
+      .brand .sub {
+        color: #8b8b9e;
+        font-size: 10px;
+        margin-top: 2px;
+      }
+      .collage {
+        flex: 1;
+        min-height: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.08fr 1fr;
+        gap: 12px;
+      }
+      .browser--hero {
+        grid-column: 1 / -1;
+      }
+      .browser {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        height: 100%;
+        border-radius: 12px;
+        border: 1px solid rgba(34, 211, 238, 0.22);
+        background: linear-gradient(180deg, #1a1520 0%, #101018 100%);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.04);
+        overflow: hidden;
+      }
+      .chrome {
+        height: 32px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 12px;
+        background: #2d1b2e;
+        border-bottom: 1px solid #4a2f4c;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .dot-r {
+        background: #ff5f57;
+      }
+      .dot-y {
+        background: #febc2e;
+      }
+      .dot-g {
+        background: #28c840;
+      }
+      .chrome-title {
+        margin-left: 6px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        color: #8b8b9e;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .viewport {
+        flex: 1;
+        min-height: 0;
+        background: #0a0a0f;
+        overflow: hidden;
+        position: relative;
+      }
+      .viewport img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+      }
+      /* Full-width home capture (1440px) must fit without side crop */
+      .browser--hero .viewport {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .browser--hero .viewport img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+        object-position: top left;
+      }
+      .route-tag {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        padding: 5px 9px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.65);
+        border: 1px solid rgba(34, 211, 238, 0.35);
+        color: #22d3ee;
+      }
+      .foot {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        color: #8b8b9e;
+      }
+      .foot strong {
+        color: #22d3ee;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mesh"></div>
+    <div class="grid-bg"></div>
+    <div class="frame" id="frame">
+      <header class="top">
+        <div class="brand">
+          <h1>Portfolio · desktop full-page</h1>
+          <p>$ screencap --story 1080 · home @ mobile · work/stack @ desktop</p>
+          <p class="sub" id="meta">smriad.github.io · live capture</p>
+        </div>
+      </header>
+
+      <div class="collage" id="collage"></div>
+
+      <footer class="foot">
+        <span>Full-stack · SaaS · AI · Cloud · <strong>100% JSS</strong></span>
+        <span id="foot-routes">3 pages</span>
+      </footer>
+    </div>
+
+    <script type="module">
+      const hero = { slug: 'home', path: '~', hero: true };
+      const bottom = [
+        { slug: 'work', path: '~/work' },
+        { slug: 'stack', path: '~/stack' },
+      ];
+
+      let pages = [];
+      try {
+        const res = await fetch('/images/social/pages-manifest.json');
+        if (res.ok) {
+          const data = await res.json();
+          pages = data.desktop?.pages ?? data.pages ?? [];
+        }
+      } catch {
+        /* empty */
+      }
+
+      const bySlug = Object.fromEntries(pages.map((p) => [p.slug, p]));
+      let mobileBySlug = {};
+      try {
+        const res = await fetch('/images/social/pages-manifest.json');
+        if (res.ok) {
+          const data = await res.json();
+          const mobile = data.mobile?.pages ?? data.pages ?? [];
+          mobileBySlug = Object.fromEntries(mobile.map((p) => [p.slug, p]));
+        }
+      } catch {
+        /* empty */
+      }
+
+      const collage = document.getElementById('collage');
+
+      function browserTile(cfg) {
+        const p =
+          cfg.hero && mobileBySlug[cfg.slug]
+            ? mobileBySlug[cfg.slug]
+            : bySlug[cfg.slug];
+        if (!p) return '';
+        const heroCls = cfg.hero ? ' browser--hero' : '';
+        return `
+          <div class="browser${heroCls}">
+            <div class="chrome">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+              <span class="chrome-title">smriad@portfolio: ${cfg.path}</span>
+            </div>
+            <div class="viewport">
+              <span class="route-tag">${cfg.path}</span>
+              <img src="${p.file}" alt="${p.label}" loading="eager" />
+            </div>
+          </div>`;
+      }
+
+      collage.innerHTML = browserTile(hero) + bottom.map(browserTile).join('');
+
+      await Promise.all(
+        [...collage.querySelectorAll('img')].map((img) =>
+          img.complete
+            ? Promise.resolve()
+            : new Promise((r) => {
+                img.onload = r;
+                img.onerror = r;
+              }),
+        ),
+      );
+      document.body.dataset.collageFit = '1';
+
+      document.getElementById('meta').textContent =
+        '3 pages · 1080×1920 · content bounds · PNG @ 2×';
+      document.getElementById('foot-routes').textContent = '3-page desktop photocollage';
+    </script>
+  </body>
+</html>
